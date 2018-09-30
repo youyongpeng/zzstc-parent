@@ -10,7 +10,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableEurekaClient
-@MapperScan({"cn.zzstc.dastabase"} )
 @ComponentScan(basePackages = {"cn.zzstc"})
 public class BusinessApplication {
 
