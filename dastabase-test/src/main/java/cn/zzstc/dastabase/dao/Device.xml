@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.zzstc.dastabase.dao.DeviceDao">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.zzstc.dastabase.entity.Device">
+        <id column="device_id" property="deviceId" />
+        <result column="device_name" property="deviceName" />
+        <result column="mac_address" property="macAddress" />
+        <result column="version" property="version" />
+        <result column="device_ip" property="deviceIp" />
+        <result column="device_port" property="devicePort" />
+        <result column="device_gateway" property="deviceGateway" />
+        <result column="subnet_mask" property="subnetMask" />
+        <result column="net_status" property="netStatus" />
+        <result column="status" property="status" />
+        <result column="created_by" property="createdBy" />
+        <result column="updated_by" property="updatedBy" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        device_id, device_name, mac_address, version, device_ip, device_port, device_gateway, subnet_mask, net_status, status, created_by, updated_by, created_at, updated_at
+    </sql>
+
+    <select id="selectOne" parameterType="String" resultMap="BaseResultMap" >
+
+        SELECT  * FROM  device WHERE  mac_address = #{VALUE }
+    </select>
+
+</mapper>
