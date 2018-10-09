@@ -22,9 +22,11 @@ spring:
 
 mybatis-plus:
   type-aliases-package: cn.zzstc.dastabase.entity
-  mapper-locations: classpath*:cn/zzstc/dastabase/dao/*.xml
+  type-handlers-package: cn.zzstc.dastabase
+  mapper-locations: classpath*:mybatis/*.xml
   configuration:
     map-underscore-to-camel-case: true
+
 
 eureka:
   client:

@@ -24,6 +24,7 @@
 		<module>business</module>
 		<module>zzstc-eureka-server</module>
 		<module>dastabase-test</module>
+		<module>database-test2</module>
 	</modules>
 
 	<properties>
